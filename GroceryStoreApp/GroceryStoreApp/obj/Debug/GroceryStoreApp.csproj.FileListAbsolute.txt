@@ -1,0 +1,9 @@
+C:\Users\jenna\source\repos\GroceryStoreAppFolder\GroceryStoreApp\GroceryStoreApp\obj\Debug\GroceryStoreApp.csprojResolveAssemblyReference.cache
+C:\Users\jenna\source\repos\GroceryStoreAppFolder\GroceryStoreApp\GroceryStoreApp\obj\Debug\GroceryStoreApp.csproj.CoreCompileInputs.cache
+C:\Users\jenna\source\repos\GroceryStoreAppFolder\GroceryStoreApp\GroceryStoreApp\bin\Debug\GroceryStoreApp.exe.config
+C:\Users\jenna\source\repos\GroceryStoreAppFolder\GroceryStoreApp\GroceryStoreApp\bin\Debug\GroceryStoreApp.exe
+C:\Users\jenna\source\repos\GroceryStoreAppFolder\GroceryStoreApp\GroceryStoreApp\bin\Debug\GroceryStoreApp.pdb
+C:\Users\jenna\source\repos\GroceryStoreAppFolder\GroceryStoreApp\GroceryStoreApp\obj\Debug\GroceryStoreApp.exe
+C:\Users\jenna\source\repos\GroceryStoreAppFolder\GroceryStoreApp\GroceryStoreApp\obj\Debug\GroceryStoreApp.pdb
+C:\Users\jenna\source\repos\GroceryStoreAppFolder\GroceryStoreApp\GroceryStoreApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jenna\source\repos\GroceryStoreAppFolder\GroceryStoreApp\GroceryStoreApp\bin\Debug\Newtonsoft.Json.xml
