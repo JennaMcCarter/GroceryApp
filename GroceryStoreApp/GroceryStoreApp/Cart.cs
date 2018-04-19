@@ -3,8 +3,8 @@ using System.Linq;
 
 
 /*
- * Cart is
- * */
+ * Cart.cs represents the object that hold and keeps track of what the user wants to buy 
+ */
 
 
 namespace GroceryStoreApp
@@ -16,11 +16,13 @@ namespace GroceryStoreApp
         //display the contents of the cart based 
         public override void DisplayGroup(string sortBy)
         {
+            //sort items in the cart
             IOrderedEnumerable<Products> displayDictionary = SortProductDictionary(sortBy);
             double subtotal = 0.0;
             double total = 0.0;
             int itemInCart = displayDictionary.Count();
 
+            //if there is something to display
             if (itemInCart > 0)
             {
                 Console.WriteLine("Item #\t\tItem Name\t\tUnits\t\t# In Stock\tPrice");
