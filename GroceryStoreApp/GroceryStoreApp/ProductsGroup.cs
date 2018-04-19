@@ -24,6 +24,10 @@ namespace GroceryStoreApp
         abstract public void DisplayGroup(string sortBy);
 
 
+        
+        //sort dictionary based on Product attributes
+        //at the moment, it only supports subtotal and name
+        //sort by ID was added so there is a default case
         public IOrderedEnumerable<Products> SortProductDictionary(string sortBy)
         {
             if (sortBy.ToLower() == "subtotal")
