@@ -3,7 +3,10 @@
 
 
 /*
- * This is
+ * This is the basic structure for the program.
+ * It keeps looping until the user wants to quit
+ * In each loop, the user can decide what they want to do next.
+ * Each if statments uses method calls to make this easy to read.
  */
 
 
