@@ -2,7 +2,7 @@
 
 
 /*
- * PaymentMethods is the base clas for CreditCards and Cheque. It can be the base class for other classes if needed
+ * PaymentMethods is the base class for CreditCards and Cheque. It can be the base class for other payment classes if needed
  */
 
 namespace GroceryStoreApp
@@ -15,6 +15,7 @@ namespace GroceryStoreApp
     }
 
 
+    //CreditCard class
     public class CreditCard : PaymentMethods
     {
         public string number { get; set; }
@@ -60,6 +61,8 @@ namespace GroceryStoreApp
 
     }
 
+
+    //Cheque class
     public class Cheque : PaymentMethods
     {
         public string routingNumber { get; set; }
