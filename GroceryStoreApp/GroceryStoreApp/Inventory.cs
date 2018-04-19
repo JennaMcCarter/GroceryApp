@@ -6,7 +6,7 @@ using System.Linq;
 
 
 /*
- * This is the 
+ * Inventory.cs keep track of all the items in the grocery store ( a group of Products)
  */
 
 namespace GroceryStoreApp
@@ -14,7 +14,8 @@ namespace GroceryStoreApp
     public class Inventory : ProductsGroup
     {
 
-
+        //Get data from JSON file and load
+        //Could later be changed to a database
         public void LoadInventory()
         {
 
@@ -29,6 +30,8 @@ namespace GroceryStoreApp
 
         }
 
+        //display everything in the inventory
+        //can later be changed so it shows only a few at a time (based on what the user wants) so it is not a very long list to go through
         public override void DisplayGroup(string sortBy)
         {
             IOrderedEnumerable<Products> displayDictionary = SortProductDictionary(sortBy);
@@ -48,6 +51,7 @@ namespace GroceryStoreApp
             }
         }
 
+        //remove a product from the inventory
         public override int RemoveProduct(int productId)
         {
             if (this.ProductsDictionary.ContainsKey(productId))
@@ -73,16 +77,21 @@ namespace GroceryStoreApp
             return false;
         }
 
+        //when someone adds something to the cart, remove amount from inventory
         public void RemoveFromInventory(int productID, int quantity)
         {
             this.ProductsDictionary[productID].quantity -= quantity;
         }
 
+
+        //when someone removes something from the cart, add amount to inventory
         public void AddtoInventory(int productID, int quantity)
         {
             this.ProductsDictionary[productID].quantity += quantity;
         }
 
+
+        //add back to the inventory by sending multiple Products
         public void AddtoInventory(Dictionary<int, Products> listOfItemsToReturn)
         {
             foreach (KeyValuePair<int, Products> item in this.ProductsDictionary)
