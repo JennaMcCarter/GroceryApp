@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
+/*
+ * This file goes along with the Program.cs file.
+ * While Program.cs is the basic structure for the application, this file creates the methods that will be called in Program.cs and
+   bring all of the parts of the program together (such as cart, inventory, etc.).
+ */
 
 
 namespace GroceryStoreApp
@@ -14,7 +18,7 @@ namespace GroceryStoreApp
         public CreditCard creditcard { get; set; }
         public Cheque cheque { get; set; }
 
-
+        //contructor
         public ProgramInterface()
         {
             this.continueRunningProgram = true;
@@ -24,6 +28,8 @@ namespace GroceryStoreApp
             this.cheque = new Cheque();
         }
 
+        
+        //this basic choices in the app
         public void DisplayMainMenu()
         {
             Console.WriteLine("Enter the number of the activity you would like to do next: ");
@@ -36,6 +42,9 @@ namespace GroceryStoreApp
             Console.WriteLine("\t7. Quit program");
         }
 
+        
+        //get user input and turn into an int which can be used when selecting choices
+        //then makes sure it is a number
         public int GetUserInput()
         {
             //userInput is what the user enters and userInputInt is the number version
@@ -55,12 +64,18 @@ namespace GroceryStoreApp
         }
 
 
+        //load inventory from JSON
         public void LoadProgram()
         {
             this.storeInventory.LoadInventory();
         }
 
 
+        
+        //Add item to cart
+        //Gets user input and checks if it exists in the inventory
+        //if it does, ask user how many they want
+        //if there is enough, remove from inventory and add to cart
         public void AddToCart()
         {
             Console.WriteLine("Which item would you like to add?");
@@ -93,7 +108,7 @@ namespace GroceryStoreApp
         }
 
 
-
+        //remove item from cart and return to inventory
         public void RemoveFromCart()
         {
             Console.WriteLine("What would you like to remove?");
@@ -111,7 +126,7 @@ namespace GroceryStoreApp
         }
 
 
-
+        //remove everything from the cart and return to inventory
         public void ClearCart()
         {
             Console.WriteLine("Are you sure you would like to empty the cart?");
@@ -127,13 +142,13 @@ namespace GroceryStoreApp
             }
         }
 
-
+        //display all Products in the inventory
         public void DisplayInventory()
         {
             this.storeInventory.DisplayGroup("ID");
         }
 
-
+        //display everything in the cart
         public void DisplayCart()
         {
             Console.WriteLine("How would you like to view your cart?");
@@ -155,7 +170,7 @@ namespace GroceryStoreApp
         }
 
 
-
+        //allow user to go to checkout and get payment information
         public void Checkout()
         {
             Console.WriteLine("How would you like to pay?");
